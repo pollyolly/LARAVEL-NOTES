@@ -48,7 +48,13 @@ $chmod -R 775 bootstrap/cache
 Disk [admin] not configured, please add a disk config in `config/filesystems.php`.
 ```
 Open 'config/filesystems.php'  add this to the disk array :
-'admin' => [ 'driver' => 'local', 'root' => storage_path('app'), ]
+
+        'admin' => [
+                'driver' =>'local',
+                'root' => public_path('uploads'),
+                'visibility' =>'public',
+                'url' => env('APP_URL').'/uploads',
+        ],
 ```
 
 Setup Nginx
