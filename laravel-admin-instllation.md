@@ -1,4 +1,7 @@
-### Installation
+### LARAVEL ADMIN INSTALLATION
+```
+https://laravel-admin.org/docs/en/#Installation
+```
 Install composer
 ```
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-composer-on-ubuntu-20-04
