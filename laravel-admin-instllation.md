@@ -31,6 +31,18 @@ Finish install
 ```
 php artisan admin:install
 ```
+Reconfigure Laravel Admin
+```
+cd qr_ticket_management
+$php artisan key:generate
+$php artisan cache:clear
+$php artisan migrate
+$chmod -R 775 storage
+$composer dump-autoload
+$chmod -R 775 bootstrap/cache
+```
+
+
 Setup Nginx
 ```
 server {
