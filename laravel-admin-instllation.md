@@ -40,13 +40,16 @@ cd qr_ticket_management
 $php artisan storage:link
 $php artisan key:generate
 $php artisan cache:clear
-$php artisan config:clear
 $php artisan migrate
 $chmod -R 775 storage
 $composer dump-autoload
 $chmod -R 775 bootstrap/cache
 ```
-
+Disk [admin] not configured, please add a disk config in `config/filesystems.php`.
+```
+Open 'config/filesystems.php'  add this to the disk array :
+'admin' => [ 'driver' => 'local', 'root' => storage_path('app'), ]
+```
 
 Setup Nginx
 ```
