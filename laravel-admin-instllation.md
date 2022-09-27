@@ -37,6 +37,7 @@ php artisan admin:install
 Reconfigure Laravel Admin
 ```
 cd qr_ticket_management
+$php artisan storage:link
 $php artisan key:generate
 $php artisan cache:clear
 $php artisan migrate
