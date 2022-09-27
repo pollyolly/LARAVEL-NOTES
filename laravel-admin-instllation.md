@@ -47,6 +47,7 @@ $chmod -R 775 bootstrap/cache
 ```
 Disk [admin] not configured, please add a disk config in `config/filesystems.php`.
 ```
+https://laravel-admin.org/docs/en/model-form-upload
 Open 'config/filesystems.php'  add this to the disk array :
 
         'admin' => [
