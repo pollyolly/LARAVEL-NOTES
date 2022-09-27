@@ -40,6 +40,7 @@ cd qr_ticket_management
 $php artisan storage:link
 $php artisan key:generate
 $php artisan cache:clear
+$php artisan config:clear
 $php artisan migrate
 $chmod -R 775 storage
 $composer dump-autoload
