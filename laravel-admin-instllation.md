@@ -6,6 +6,18 @@ Install composer
 ```
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-composer-on-ubuntu-20-04
 ```
+PHP Extensions
+```
+BCMath PHP Extension
+Ctype PHP Extension
+Fileinfo PHP extension
+JSON PHP Extension
+Mbstring PHP Extension
+OpenSSL PHP Extension
+PDO PHP Extension
+Tokenizer PHP Extension
+XML PHP Extension
+```
 Install laravel 5.5
 ```
 composer create-project --prefer-dist laravel/laravel qr_ticket_management "5.5.*"
