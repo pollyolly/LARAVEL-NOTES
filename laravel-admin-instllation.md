@@ -75,6 +75,8 @@ server {
                 fastcgi_intercept_errors on;
                 fastcgi_pass unix:/run/php/php7.4-fpm.sock;
                 fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
+                fastcgi_buffers 4 16k;
+                fastcgi_buffer_size 16k;
         }
 }
 ```
