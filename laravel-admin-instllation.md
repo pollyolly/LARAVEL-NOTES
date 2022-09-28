@@ -78,9 +78,19 @@ server {
         root /var/www/html/qr_ticket_management/public;
         index index.php index.html;
         server_name _;
+        
+        add_header X-Frame-Options "SAMEORIGIN";
+        add_header X-XSS-Protection "1; mode=block";
+        add_header X-Content-Type-Options "nosniff";
+        charset utf-8;
+        
         location / {
                 try_files $uri $uri/ /index.php?$query_string;
         }
+        
+        location = /favicon.ico { access_log off; log_not_found off; }
+        location = /robots.txt  { access_log off; log_not_found off; }
+        
         location ~ \.php$ {
                 #NOTE: You should have "cgi.fix_pathinfo = 0;" in php.ini
                 include fastcgi_params;
@@ -89,6 +99,10 @@ server {
                 fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
                 fastcgi_buffers 4 16k;
                 fastcgi_buffer_size 16k;
+        }
+        
+        location ~ /\.(?!well-known).* {
+                deny all;
         }
 }
 ```
