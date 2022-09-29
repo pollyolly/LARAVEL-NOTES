@@ -112,3 +112,7 @@ service mysql start
 service nginx start
 service php7.4-fpm start
 ```
+Tutorials
+
+[Laravel Admin Walkthrough](https://www.youtube.com/watch?v=F0ujUOAgWqg)
+
