@@ -71,7 +71,10 @@ Open 'config/filesystems.php'  add this to the disk array :
 ```
 Class 'Doctrine\DBAL\Driver\PDOMySql\Driver' not found
 ```
+Check for Laravel 5.5
 $composer require doctrine/dbal
+or
+$composer require doctrine/dbal:2.*
 ```
 Creating Controller and Model
 ```
