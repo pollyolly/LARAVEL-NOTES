@@ -69,7 +69,18 @@ Open 'config/filesystems.php'  add this to the disk array :
                 'url' => env('APP_URL').'/uploads',
         ],
 ```
+Class 'Doctrine\DBAL\Driver\PDOMySql\Driver' not found
+```
+$composer require doctrine/dbal
+```
+Creating Controller and Model
+```
+Model
+$php artisan make:model QRTickets -m
 
+Controller
+$php artisan admin:make QRTicketsController --model='App\QRTickets'
+```
 Setup Nginx
 ```
 server {
@@ -112,6 +123,7 @@ service mysql start
 service nginx start
 service php7.4-fpm start
 ```
+
 Tutorials
 
 [Laravel Admin Walkthrough](https://www.youtube.com/watch?v=F0ujUOAgWqg)
