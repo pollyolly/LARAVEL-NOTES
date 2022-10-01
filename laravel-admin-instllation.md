@@ -150,3 +150,5 @@ Tutorials
 
 [Install Laravel Admin Panel | Admin Dashboard in Laravel](https://www.youtube.com/watch?v=1-6vBAPvU4k)
 
+[Laravel](https://laravel.com/docs/9.x/eloquent-relationships)
+
