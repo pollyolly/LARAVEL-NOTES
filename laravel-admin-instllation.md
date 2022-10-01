@@ -116,3 +116,5 @@ Tutorials
 
 [Laravel Admin Walkthrough](https://www.youtube.com/watch?v=F0ujUOAgWqg)
 
+[Install Laravel Admin Panel | Admin Dashboard in Laravel](https://www.youtube.com/watch?v=1-6vBAPvU4k)
+
