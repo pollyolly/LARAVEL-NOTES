@@ -84,6 +84,23 @@ $php artisan make:model QRTickets -m
 Controller
 $php artisan admin:make QRTicketsController --model='App\QRTickets'
 ```
+Updating Columns Database (Go to Latest migration /database/migration/)
+```
+    public function up()
+    {
+        Schema::create('q_r_tickets', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('ticket_number');
+            $table->string('ticket_subject');
+            $table->text('ticket_content');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->timestamps();
+        });
+    }
+    
+$php artisan migrate
+```
 Setup Nginx
 ```
 server {
