@@ -113,7 +113,7 @@ appfolder/.env                    - Laravel DB, SMTP, etc settings
 ```
 Move Model to Models Folder
 ```
-0. Seach the Model on config, app/Admin/, app/database/, app/Http/, app/config/, app/Models/
+0. Seach the Model on config, app/Admin/, appfolder/database/, app/Http/, appfolder/config/, app/Models/
 $egrep -r "Model Class"
 
 1. Update app/Model
