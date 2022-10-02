@@ -142,7 +142,8 @@ Delete Model
 ```
 1. Delete the Model
 2. Delete the Model migration in /database/migration
-3. php artisan migrate:refresh
+3. This will Remove All the Data in Database
+   $php artisan migrate:refresh 
 ```
 Unable to reset Laravel Admin
 ```
