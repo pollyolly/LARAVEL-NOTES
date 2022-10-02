@@ -79,7 +79,7 @@ $composer require doctrine/dbal:2.*
 Creating Controller and Model
 ```
 Model
-$php artisan make:model Models\QRTickets -m
+$php artisan make:model Models/QRTickets -m
 
 Controller
 $php artisan admin:make QRTicketsController --model='App\Models\QRTickets'
