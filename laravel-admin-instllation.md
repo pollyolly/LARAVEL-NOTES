@@ -101,6 +101,16 @@ Updating Columns Database (Go to Latest migration /database/migration/)
     
 $php artisan migrate
 ```
+Important Default Locations
+```
+appfolder/app/database/migration/
+appfolder/app/
+appfolder/app/Admin/Controllers/
+appfolder/app/Admin/routes.php
+appfolder/config/admin.php
+appfolder/config/filesystems.php
+appfolder/.env
+```
 Setup Nginx
 ```
 server {
