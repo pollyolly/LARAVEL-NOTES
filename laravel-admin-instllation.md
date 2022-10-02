@@ -135,10 +135,10 @@ to: 'model' => App\Models\User::class,
 
 6. Run
 $composer dump-autoload
-
-$php artisan make:model Models\Test -m
-
 $chown -R www-data:www-data appfolder
+
+To Test:
+$php artisan make:model Models\Test -m
 ```
 Delete Model
 ```
