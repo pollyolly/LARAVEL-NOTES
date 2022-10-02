@@ -144,6 +144,15 @@ Delete Model
 2. Delete the Model migration in /database/migration
 3. php artisan migrate:refresh
 ```
+Unable to reset Laravel Admin
+```
+1. Backup Current Laravel Customizations
+2. Uninstall laravel-admin
+$php artisan admin:uninstall
+3. Reinstall Laravel Admin
+$composer require encore/laravel-admin
+$php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"
+```
 Setup Nginx
 ```
 server {
