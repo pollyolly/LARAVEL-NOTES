@@ -79,10 +79,10 @@ $composer require doctrine/dbal:2.*
 Creating Controller and Model
 ```
 Model
-$php artisan make:model QRTickets -m
+$php artisan make:model Models/QRTickets -m
 
 Controller
-$php artisan admin:make QRTicketsController --model='App\QRTickets'
+$php artisan admin:make QRTicketsController --model='App/Models/QRTickets'
 ```
 Updating Columns Database (Go to Latest migration /database/migration/)
 ```
