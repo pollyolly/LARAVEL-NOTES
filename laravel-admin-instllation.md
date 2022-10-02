@@ -111,6 +111,33 @@ appfolder/config/admin.php        - Extensions Configs
 appfolder/config/filesystems.php  - Laravel File Upload Settings
 appfolder/.env                    - Laravel DB, SMTP, etc settings
 ```
+Move Model to Models Folder
+```
+1. Update app/Model
+From: namespace App; 
+to: namespace App\Models;
+
+2. Update app/Admin/Controller (app/Http/Controllers/Auth/ and app/Admin/Controllers/)
+From: use App\QRTickets; 
+to: use App\Models\QRTickets;
+
+3. Update app/config/auth.php
+From: 'model' => App\User::class, 
+to: 'model' => App\Models\User::class,
+
+4. Update app/database/factories
+From: $factory->define(App\User::class 
+to: $factory->define(App\Models\User::class
+
+5. Update app/config/services.php
+From: 'model' => App\User::class, 
+to: 'model' => App\Models\User::class,
+
+6. Run
+$composer dump-autoload
+
+$php artisan make:model Models\Test -m
+```
 Setup Nginx
 ```
 server {
