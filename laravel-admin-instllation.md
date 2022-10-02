@@ -152,6 +152,7 @@ $php artisan admin:uninstall
 3. Reinstall Laravel Admin
 $composer require encore/laravel-admin
 $php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"
+$php artisan admin:install
 ```
 Setup Nginx
 ```
