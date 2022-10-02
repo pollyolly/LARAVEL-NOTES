@@ -103,13 +103,13 @@ $php artisan migrate
 ```
 Important Default Locations
 ```
-appfolder/app/database/migration/
-appfolder/app/
-appfolder/app/Admin/Controllers/
-appfolder/app/Admin/routes.php
-appfolder/config/admin.php
-appfolder/config/filesystems.php
-appfolder/.env
+appfolder/app/database/migration/ - Laravel Database Schema
+appfolder/app/                    - Admin Models
+appfolder/app/Admin/Controllers/  - Admin Controllers
+appfolder/app/Admin/routes.php    - Admin Routings
+appfolder/config/admin.php        - Extensions Configs
+appfolder/config/filesystems.php  - Laravel File Upload Settings
+appfolder/.env                    - Laravel DB, SMTP, etc settings
 ```
 Setup Nginx
 ```
