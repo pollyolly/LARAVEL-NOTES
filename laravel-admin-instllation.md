@@ -138,6 +138,12 @@ $composer dump-autoload
 
 $php artisan make:model Models\Test -m
 ```
+Delete Model
+```
+1. Delete the Model
+2. Delete the Model migration in /database/migration
+3. php artisan migrate:refresh
+```
 Setup Nginx
 ```
 server {
