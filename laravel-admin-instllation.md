@@ -150,6 +150,15 @@ Delete Model
 3. This will Remove All the Data in Database
    $php artisan migrate:refresh 
 ```
+Update Database Schema
+```
+$php artisan make:migration add_fields_to_users_table --table=users
+
+Add the code below: database/migration/add_fields_to_users_table.php
+Schema::table('users', function ($table) {
+     $table->string('student_number');
+});
+```
 Unable to reset Laravel Admin
 ```
 1. Backup Current Laravel Customizations
