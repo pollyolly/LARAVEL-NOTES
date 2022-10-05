@@ -162,6 +162,8 @@ Schema::table('users', function ($table) {
 
 3. Run Migrate
   $php artisan migrate
+  or
+  $php artisan migrate --path=/database/migrations/migration_q_r_tickets_table.php
 ```
 Unable to reset Laravel Admin
 ```
