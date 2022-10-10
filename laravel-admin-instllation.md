@@ -103,6 +103,7 @@ $php artisan migrate
 ```
 Important Default Locations
 ```
+Laravel Admin: 
 appfolder/app/database/migration/ - Laravel Database Schema
 appfolder/app/                    - Admin Models
 appfolder/app/Admin/Controllers/  - Admin Controllers
@@ -110,6 +111,14 @@ appfolder/app/Admin/routes.php    - Admin Routings
 appfolder/config/admin.php        - Extensions Configs
 appfolder/config/filesystems.php  - Laravel File Upload Settings
 appfolder/.env                    - Laravel DB, SMTP, etc settings
+
+Main Laravel Admin:
+appfolder/vendor/encore/laravel-admin/
+
+Laravel:
+appfolder/app/Http/Controllers/    - Laravel Client Controllers
+appfolder/app/Models/              - Manually created Folder for Models
+appfolder/resources/views          - Laravel blades / Views
 ```
 Move Model to Models Folder
 ```
