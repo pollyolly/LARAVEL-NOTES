@@ -57,25 +57,7 @@ $chmod -R 775 storage
 $composer dump-autoload
 $chmod -R 775 bootstrap/cache
 ```
-Disk [admin] not configured, please add a disk config in `config/filesystems.php`.
-```
-https://laravel-admin.org/docs/en/model-form-upload
-Open 'config/filesystems.php'  add this to the disk array :
 
-        'admin' => [
-                'driver' =>'local',
-                'root' => public_path('uploads'),
-                'visibility' =>'public',
-                'url' => env('APP_URL').'/uploads',
-        ],
-```
-Class 'Doctrine\DBAL\Driver\PDOMySql\Driver' not found
-```
-Check for Laravel 5.5
-$composer require doctrine/dbal
-or
-$composer require doctrine/dbal:2.*
-```
 Creating Controller and Model
 ```
 Model
@@ -174,16 +156,7 @@ Schema::table('users', function ($table) {
   or
   $php artisan migrate --path=/database/migrations/migration_q_r_tickets_table.php
 ```
-Unable to reset Laravel Admin
-```
-1. Backup Current Laravel Customizations
-2. Uninstall laravel-admin
-$php artisan admin:uninstall
-3. Reinstall Laravel Admin
-$composer require encore/laravel-admin
-$php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"
-$php artisan admin:install
-```
+
 Setup Nginx
 ```
 server {
@@ -226,8 +199,39 @@ service nginx start
 service mysql start
 service php7.4-fpm start
 ```
+### Troubleshooting
 
-Tutorials
+Disk [admin] not configured, please add a disk config in `config/filesystems.php`.
+```
+https://laravel-admin.org/docs/en/model-form-upload
+Open 'config/filesystems.php'  add this to the disk array :
+
+        'admin' => [
+                'driver' =>'local',
+                'root' => public_path('uploads'),
+                'visibility' =>'public',
+                'url' => env('APP_URL').'/uploads',
+        ],
+```
+Class 'Doctrine\DBAL\Driver\PDOMySql\Driver' not found
+```
+Check for Laravel 5.5
+$composer require doctrine/dbal
+or
+$composer require doctrine/dbal:2.*
+```
+Unable to reset Laravel Admin
+```
+1. Backup Current Laravel Customizations
+2. Uninstall laravel-admin
+$php artisan admin:uninstall
+3. Reinstall Laravel Admin
+$composer require encore/laravel-admin
+$php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"
+$php artisan admin:install
+```
+
+### Tutorials
 
 [Laravel Admin Walkthrough](https://www.youtube.com/watch?v=F0ujUOAgWqg)
 
