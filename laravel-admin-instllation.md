@@ -160,9 +160,11 @@ Schema::table('users', function ($table) {
 ```
 [Adding Sessions](https://laravel.com/docs/9.x/session#configuration)
 ```
-php artisan session:table
- 
-php artisan migrate
+From Database:
+$php artisan session:table
+$php artisan migrate
+$cd appfolder/.env
+SESSION_DRIVER=database
 ```
 
 Setup Nginx
