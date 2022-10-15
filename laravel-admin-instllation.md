@@ -101,6 +101,8 @@ Laravel:
 appfolder/app/Http/Controllers/    - Laravel Client Controllers
 appfolder/app/Models/              - Manually created Folder for Models
 appfolder/resources/views          - Laravel blades / Views
+appfolder/config/session.php       - Laravel Session
+appfolder/routes/web.php
 ```
 Move Model to Models Folder
 ```
