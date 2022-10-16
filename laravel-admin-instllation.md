@@ -158,7 +158,7 @@ Schema::table('users', function ($table) {
   or
   $php artisan migrate --path=/database/migrations/migration_q_r_tickets_table.php
 ```
-[Adding Sessions](https://laravel.com/docs/9.x/session#configuration)
+[Optional: Adding Sessions](https://laravel.com/docs/9.x/session#configuration)
 ```
 From Database:
 $php artisan session:table
