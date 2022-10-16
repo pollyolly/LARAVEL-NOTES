@@ -166,7 +166,32 @@ $php artisan migrate
 $cd appfolder/.env
 SESSION_DRIVER=database
 ```
+[Adding Middleware](https://laravel.com/docs/5.5/middleware#assigning-middleware-to-routes)
+```
+$php artisan make:middleware CheckLoginSession
+//app/Http/Middleware/CheckLoginSession.php
+public function handle($request, Closure $next)
+    {
+        if(!$request->session()->get('authID')){
+                return redirect('/student-login');
+        }
+        return $next($request);
+    }
 
+//Update: $routeMiddleware
+//app/Http/Kernel.php
+protected $routeMiddleware = [
+     'check.login.session' => \App\Http\Middleware\CheckLoginSession::class
+]
+
+//Use in routes/Web.php
+Route::get('student-ticket-list', 'StudentSearchController@ticketIndex')
+->name('student.ticket.list')
+->middleware('check.login.session');
+
+//Process
+//First call the Middleware -> then the Router
+```
 Setup Nginx
 ```
 server {
