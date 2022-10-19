@@ -15,15 +15,21 @@ echo substr(md5(rand()),0,32); //32 chars
 
 ```
 //User
-
 public post function(){
     return $this->hasMany(PostClass::class);
 }
-
 //Post
 public userpost function(){
     return $this->belongsto(UserClass::class);
 }
+
+//Schema User
+id
+name
+//Schema Post
+id
+user_id
+post
 ```
 ### References
 
