@@ -34,3 +34,5 @@ post
 ### References
 
 [Sample Eagerloading](https://vegibit.com/laravel-hasmany-and-belongsto-tutorial/)
+
+[File upload](https://appdividend.com/2022/02/28/laravel-file-upload/)
