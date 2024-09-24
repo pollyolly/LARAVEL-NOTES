@@ -2,83 +2,65 @@ Setup Laravel Installer In Ubuntu
 
 The first requirement is the PHP, with open terminal type the following command.
 
-<pre>
-<b>sudo apt-get install php</b>
-</pre>
+```
+$sudo apt-get install php
+```
 
 Check the version of PHP. 
 
-<pre>
-<b>php -v</b> 
-</pre>
+```
+$php -v 
+```
 
-Also install the Mbstring PHP Extension.
+Also install the PHP Mbstring, XML, Zip, Curl, Extension.
 
-<pre>
-<b>sudo apt-get install php7.0-mbstring</b> 
-</pre>
-
-The XML PHP Extension.
-
-<pre>
-<b>sudo apt-get install php-xml</b>
-</pre>
-
-And the ZIP PHP Extension.
-
-<pre>
-<b>sudo apt-get install php7.0-zip</b>
-</pre>
-
-If you don’t have already installed curl in your machine, type:
-
-<pre>
-<b>sudo apt-get install curl</b>
-</pre>
+```
+$sudo apt-get install php7.0-mbstring php7.0-xml php7.0-zip php7.0-curl
+```
 
 The Laravel uses the composer to manage your dependencies, so the next step is install Composer.
 
-<pre>
-<b>curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer</b>
-</pre>
+```
+$curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+```
 
 Change the permissions to run the composer command without sudo:
 
-<pre>
-<b>sudo chown -R $USER ~/.composer/ </b>
-</pre>
+```
+$sudo chown -R $USER ~/.composer/
+```
 
 Alternatively, you may also init a Laravel project by issuing the Composer create-project command in your terminal:
 
-<pre>
-<b>composer create-project --prefer-dist laravel/laravel project-name </b>
-</pre>
+```
+$composer create-project --prefer-dist laravel/laravel project-name
+```
 
 Or install Laravel installer to use the following command “laravel new project”:
 
-<pre>
-<b>composer global require "laravel/installer" </b>
-</pre>
+```
+$composer global require "laravel/installer"
+```
 
 For the laravel command works we need append a line in bashrc file, if you only uses terminal.
 
-<pre>
-<b>echo 'export PATH="$HOME/.composer/vendor/bin:$PATH"' >> ~/.bashrc </b>
-</pre>
+```
+$echo 'export PATH="$HOME/.composer/vendor/bin:$PATH"' >> ~/.bashrc
+```
 
 Check the .bashrc source
 
-<pre>
-<b>source ~/.bashrc </b>
-</pre>
+```
+$source ~/.bashrc
+```
 
 Restart the terminal.
 
 And initialize a Laravel project.
 
-<pre>
-<b>laravel new blog</b>
-</pre>
+```
+$laravel new blog
+```
 
 Run the Laravel server. Enjoy!
 
@@ -86,9 +68,9 @@ Run the Laravel server. Enjoy!
 
 Folder Permission:
 
-<pre>
-<b>chown -R www-data:www-data FolderName</b>
-</pre>
+```
+$chown -R www-data:www-data FolderName
+```
 
 <br> ============================= <br>
 
@@ -96,30 +78,26 @@ Setup multiple project folder:
 
 First change the .htaccess public folder add 
 
-<pre>
-<b>RewriteBase /custom-url</b>
-</pre>
+```
+RewriteBase /custom-url
+```
 
 Second in your site-available sitename.conf config add the following: <br>
 
-<b>
-<pre>
+```
 ***Directory /var/www/html/appfolder/public***
 Options Indexes FollowSymLinks
 AllowOverride All
 ***Directory***
-</pre>
-</b>
+```
 
 <i> Note: Replace *** with proper tagging </i>
 
-<b>
-<pre>
-<b>
+```
 DocumentRoot /var/www/html
 ServerName localhost 
 Alias /custom-url     /var/www/html/appfolder/public<b>
-</pre>
+```
 
 Sample complete code:
 
@@ -139,5 +117,4 @@ Sample complete code:
   </Directory>
 
 </VirtualHost>
-
 ```
