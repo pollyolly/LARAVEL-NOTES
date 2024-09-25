@@ -1,4 +1,4 @@
-Setup Laravel Installer In Ubuntu
+### Setup Laravel Installer In Ubuntu
 
 The first requirement is the PHP, with open terminal type the following command.
 
@@ -64,17 +64,12 @@ $laravel new blog
 
 Run the Laravel server. Enjoy!
 
-<br> ============================== <br>
-
-Folder Permission:
-
+### Folder Permission
 ```
 $chown -R www-data:www-data FolderName
 ```
 
-<br> ============================= <br>
-
-Setup multiple project folder:
+### Setup Multiple Project Folder
 
 First change the .htaccess public folder add 
 
