@@ -1,5 +1,5 @@
-### Laravel-Notes
-### Setup Laravel Installer In Ubuntu
+## LARAVEL NOTES
+### Laravel Installer In Ubuntu
 
 The first requirement is the PHP, with open terminal type the following command.
 
@@ -114,7 +114,6 @@ Sample complete code:
 
 </VirtualHost>
 ```
-
 ### Lumen
 Generate project of Lumen
 ```
@@ -128,8 +127,7 @@ echo substr(md5(rand()),0,32); //32 chars
 ```
 
 ### Eager Loading
-
-```
+```php
 //User
 public post function(){
     return $this->hasMany(PostClass::class);
@@ -138,14 +136,6 @@ public post function(){
 public userpost function(){
     return $this->belongsto(UserClass::class);
 }
-
-//Schema User
-id
-name
-//Schema Post
-id
-user_id
-post
 ```
 ### References
 
