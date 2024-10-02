@@ -97,7 +97,7 @@ Alias /custom-url     /var/www/html/appfolder/public<b>
 
 Sample complete code:
 
-```
+```vim
 <VirtualHost *:80>
 
   ServerName 192.486.45.1
@@ -114,29 +114,7 @@ Sample complete code:
 
 </VirtualHost>
 ```
-### Lumen
-Generate project of Lumen
-```
-Generate project for lumen
-$composer create-project --prefer-dist laravel/lumen blog-app
-```
-Generate app key for .env using PHP interactive mode
-```
-$php -a
-echo substr(md5(rand()),0,32); //32 chars
-```
-
-### Eager Loading
 ```php
-//User
-public post function(){
-    return $this->hasMany(PostClass::class);
-}
-//Post
-public userpost function(){
-    return $this->belongsto(UserClass::class);
-}
-```
 ### References
 
 [Sample Eagerloading](https://vegibit.com/laravel-hasmany-and-belongsto-tutorial/)
