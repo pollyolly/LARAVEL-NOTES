@@ -77,35 +77,77 @@ Run the Laravel server. Enjoy!
 
 ### Folder Permission
 ```vim
-$chown -R www-data:www-data project-folder
+$sudo chown -R www-data.www-data /var/www/project-folder
+$sudo chown -R www-data.www-data /var/www/project-folder/storage
+$sudo chown -R www-data.www-data /var/www/project-folder/bootstrap/cache
+```
+### Setup NginX
+```vim
+$sudo nano /etc/nginx/sites-available/project-folder
+```
+```vim
+server {
+    listen 80;
+    server_name server_domain_or_ip.com;
+    root /var/www/project-folder/public;
+    add_header X-Frame-Options "SAMEORIGIN";
+    add_header X-XSS-Protection "1; mode=block";
+    add_header X-Content-Type-Options "nosniff";
+    index index.html index.htm index.php;
+    charset utf-8;
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location = /robots.txt  { access_log off; log_not_found off; }
+    error_page 404 /index.php;
+    location ~ \.php$ {
+        fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+    location ~ /\.(?!well-known).* {
+        deny all;
+    }
+}
+```
+```vim
+$sudo ln -s /etc/nginx/sites-available/project-config /etc/nginx/sites-enabled/
+```
+```vim
+$nginx -t
+```
+```vim
+$service nginx reload
+```
+```vim
+http://server_domain_or_ip.com
 ```
 ### Setup Multiple Project Folder using Apache2
 First change the .htaccess public folder add 
 ```vim
-RewriteBase /custom-url
+RewriteBase /myapp
 ```
 Second in your site-available sitename.conf config add the following: <br>
 ```vim
-<Directory /var/www/html/appfolder/public>
+<Directory /var/www/html/project-folder/public>
   Options Indexes FollowSymLinks
   AllowOverride All
 </Directory>
 ```
-<i> Note: Replace *** with proper tagging </i>
 ```vim
 DocumentRoot /var/www/html
 ServerName localhost 
-Alias /custom-url     /var/www/html/appfolder/public
+Alias /myapp-url     /var/www/html/project-folder/public
 ```
-Sample complete code:
-
 ```vim
 <VirtualHost *:80>
-  ServerName 192.486.45.1 example.com
+  ServerName 192.486.45.1 myapp.com
   ServerAlias 127.0.0.1 localhost
-  Alias /assetapp /var/www/html/appfolder/public
+  Alias /myapp-url /var/www/html/project-folder/public
   DocumentRoot /var/www/html
-  <Directory /var/www/html/appfolder/public>
+  <Directory /var/www/html/project-folder/public>
     AllowOverride All
     Options -Indexes +MultiViews
     Order deny,allow
