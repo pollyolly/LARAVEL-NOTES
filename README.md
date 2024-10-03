@@ -169,7 +169,7 @@ Alias /myapp-url     /var/www/html/project-folder/public
   </Directory>
 </VirtualHost>
 ```
-### The Routes, Views, Controller, Models Folders
+### The Routes, Views, Controller, Models, Migration, Factories, Seeders
 routes
 ```vim
 project-folder/routes/web.php 
@@ -220,6 +220,39 @@ $php artisan make:seeder UserSeeder
 //Run seeder all or individually
 $php artisan db:seed
 $php artisan db:seed --class=UserSeeder
+```
+### Blade Templating
+Adding blade file to blade file
+```
+@include('header') <!-- header.blade.php -->
+@include('footer') <!-- footer.blade.php -->
+```
+Adding script to blade
+```
+<html>
+ <body>
+  @stack('scripts') <!-- Add here the Script -->
+ </body>
+<html>
+
+@push('scripts') <!-- Script to add -->
+ <script>alert('hello');</script>
+@endpush
+```
+Adding section to extended blade file
+```
+//layout.blade.php
+<html>
+ @yield('body') <!-- Add here the Section -->
+</html>
+
+//home.blade.php
+@extends('layout') <!-- Extended layout.blade.php -->
+@section('body') <!-- Section to add in layout.blade.php -->
+ <body>
+  <h1>Body</h1>
+ </body>
+@endsection
 ```
 ## Warning
 This Will Empty Your Table Rows and Values
