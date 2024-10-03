@@ -192,15 +192,30 @@ project-folder/app/Models/UserModel.php
 commands:
 $php artisan make:model UserModel
 ```
-Migrations
+Migrations (Handle database and table changes)
 ```vim
 project-folder/database/migrations
 commands:
 //Create migration
 $php artisan make:migration create_product_table
-
 //Run any pending and new migrations
 $php artisan migrate
+```
+factories
+```vim
+project-folder/database/factories/
+commands:
+$php artisan make:factory UserFactory
+```
+seeders
+```vim
+project-folder/database/seeders/
+commands:
+//Create Seeder
+$php artisan make:seeder UserSeeder
+//Run seeder all or individually
+$php artian db:seed
+$php artian db:seed --class=UserSeeder
 ```
 ### References
 
