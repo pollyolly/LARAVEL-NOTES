@@ -217,6 +217,11 @@ $php artisan make:seeder UserSeeder
 $php artisan db:seed
 $php artisan db:seed --class=UserSeeder
 ```
+## Warning
+This Will Empty Your Table Rows and Values
+```
+$php artisan migrate:fresh 
+```
 ### References
 
 [Sample Eagerloading](https://vegibit.com/laravel-hasmany-and-belongsto-tutorial/)
