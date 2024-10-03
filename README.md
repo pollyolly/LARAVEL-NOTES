@@ -214,8 +214,8 @@ commands:
 //Create Seeder
 $php artisan make:seeder UserSeeder
 //Run seeder all or individually
-$php artian db:seed
-$php artian db:seed --class=UserSeeder
+$php artisan db:seed
+$php artisan db:seed --class=UserSeeder
 ```
 ### References
 
