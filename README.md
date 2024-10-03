@@ -1,5 +1,42 @@
 ## LARAVEL NOTES
-### Laravel Installer In Ubuntu
+### Composer Install
+Update the ubuntu package
+```vim
+$sudo apt update
+```
+Install required package
+```vim
+$sudo apt install php-cli unzip
+```
+Download and install composer
+```vim
+$cd ~
+$curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
+```
+Verify downloaded install and verify the installer
+```vim
+$HASH=`curl -sS https://composer.github.io/installer.sig`
+$echo $HASH
+```
+```
+dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6
+```
+Check if downloaded script is safe to run
+```vim
+$php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+```
+```
+Installer verified
+```
+To install composer globally
+```vim
+$sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
+```
+Check composer if installed
+```vim
+$composer
+```
+### Laravel Installer
 
 The first requirement is the PHP, with open terminal type the following command.
 
