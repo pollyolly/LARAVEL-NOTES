@@ -171,29 +171,29 @@ Alias /myapp-url     /var/www/html/project-folder/public
 ```
 ### The Routes, Views, Controller, Models Folders
 routes
-```
+```vim
 project-folder/routes/web.php 
 ```
 views 
-```
+```vim
 project-folder/resources/views/welcome.blade.php
 commands:
 $php artisan make:view welcome
 ```
 Controller
-```
+```vim
 project-folder/app/Http/Controllers/UserController.php
 commands:
 $php artisan make:controller UserController
 ```
 Models
-```
+```vim
 project-folder/app/Models/UserModel.php
 commands:
 $php artisan make:model UserModel
 ```
 Migrations
-```
+```vim
 project-folder/database/migrations
 commands:
 //Create migration
