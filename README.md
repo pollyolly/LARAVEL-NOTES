@@ -114,7 +114,7 @@ Sample complete code:
 
 </VirtualHost>
 ```
-```php
+
 ### References
 
 [Sample Eagerloading](https://vegibit.com/laravel-hasmany-and-belongsto-tutorial/)
