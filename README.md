@@ -101,8 +101,8 @@ Sample complete code:
 
 ```vim
 <VirtualHost *:80>
-  ServerName 192.486.45.1
-  ServerAlias 127.0.0.1
+  ServerName 192.486.45.1 example.com
+  ServerAlias 127.0.0.1 localhost
   Alias /assetapp /var/www/html/appfolder/public
   DocumentRoot /var/www/html
   <Directory /var/www/html/appfolder/public>
