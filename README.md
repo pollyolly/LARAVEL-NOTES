@@ -86,16 +86,16 @@ RewriteBase /custom-url
 ```
 Second in your site-available sitename.conf config add the following: <br>
 ```vim
-***Directory /var/www/html/appfolder/public***
-Options Indexes FollowSymLinks
-AllowOverride All
-***Directory***
+<Directory /var/www/html/appfolder/public>
+  Options Indexes FollowSymLinks
+  AllowOverride All
+</Directory>
 ```
 <i> Note: Replace *** with proper tagging </i>
 ```vim
 DocumentRoot /var/www/html
 ServerName localhost 
-Alias /custom-url     /var/www/html/appfolder/public<b>
+Alias /custom-url     /var/www/html/appfolder/public
 ```
 Sample complete code:
 
@@ -103,13 +103,13 @@ Sample complete code:
 <VirtualHost *:80>
   ServerName 192.486.45.1
   ServerAlias 127.0.0.1
-  Alias /ilcasset /var/www/html/appfolder/public
+  Alias /assetapp /var/www/html/appfolder/public
   DocumentRoot /var/www/html
   <Directory /var/www/html/appfolder/public>
-     AllowOverride All
-         Options -Indexes +MultiViews
-         Order deny,allow
-         allow from 192.486.45.1
+    AllowOverride All
+    Options -Indexes +MultiViews
+    Order deny,allow
+    allow from 192.486.45.1
   </Directory>
 </VirtualHost>
 ```
