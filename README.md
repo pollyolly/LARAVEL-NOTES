@@ -73,8 +73,22 @@ And initialize a Laravel project.
 ```vim
 $laravel new blog
 ```
-Run the Laravel server. Enjoy!
+### Setup Project
+/var/www/project-folder/.env
+```
+APP_NAME="Inventory App"
+APP_ENV=development
+APP_KEY=generated_unique_key_application
+APP_DEBUG=true
+APP_URL=http://domain_or_ip
 
+ DB_CONNECTION=mysql
+ DB_HOST=127.0.0.1
+ DB_PORT=3306
+ DB_DATABASE=inventory_app
+ DB_USERNAME=root
+ DB_PASSWORD=samplePassword
+```
 ### Folder Permission
 ```vim
 $sudo chown -R www-data.www-data /var/www/project-folder
@@ -155,7 +169,39 @@ Alias /myapp-url     /var/www/html/project-folder/public
   </Directory>
 </VirtualHost>
 ```
+### The Routes, Views, Controller, Models Folders
+routes
+```
+project-folder/routes/web.php 
+```
+views 
+```
+project-folder/resources/views/welcome.blade.php
+commands:
+$php artisan make:view welcome
+```
+Controller
+```
+project-folder/app/Http/Controllers/UserController.php
+commands:
+$php artisan make:controller UserController
+```
+Models
+```
+project-folder/app/Models/UserModel.php
+commands:
+$php artisan make:model UserModel
+```
+Migrations
+```
+project-folder/database/migrations
+commands:
+//Create migration
+$php artisan make:migration create_product_table
 
+//Run any pending and new migrations
+$php artisan migrate
+```
 ### References
 
 [Sample Eagerloading](https://vegibit.com/laravel-hasmany-and-belongsto-tutorial/)
