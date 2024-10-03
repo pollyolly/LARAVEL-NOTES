@@ -201,7 +201,7 @@ $php artisan make:migration create_product_table
 //Run any pending and new migrations
 $php artisan migrate
 ```
-factories
+factories (https://fakerphp.org/formatters/numbers-and-strings/)
 ```vim
 project-folder/database/factories/
 commands:
