@@ -263,8 +263,6 @@ $php artisan migrate:fresh
 
 [Sample Eagerloading](https://vegibit.com/laravel-hasmany-and-belongsto-tutorial/)
 
-[File upload](https://appdividend.com/2022/02/28/laravel-file-upload/)
-
 [Laravel tutorials](https://laravel-news.com/category/tutorials)
 
 [Install Composer on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-composer-on-ubuntu-20-04)
