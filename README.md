@@ -260,9 +260,6 @@ This Will Empty Your Table Rows and Values
 $php artisan migrate:fresh 
 ```
 ### References
-
-[Sample Eagerloading](https://vegibit.com/laravel-hasmany-and-belongsto-tutorial/)
-
 [Laravel tutorials](https://laravel-news.com/category/tutorials)
 
 [Install Composer on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-composer-on-ubuntu-20-04)
