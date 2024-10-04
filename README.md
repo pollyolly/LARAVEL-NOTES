@@ -260,7 +260,7 @@ Display errors
 @if($errors->any())
  {!! implode('', $errors->all('<div>:message</div>')) !!}
 @endif
-
+<!-- Display per input -->
 @error('product_name') <!-- Input name -->
  <p>Error Product Name Required</p>
 @enderror
