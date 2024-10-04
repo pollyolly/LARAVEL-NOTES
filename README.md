@@ -255,9 +255,10 @@ Adding section to extended blade file
 @endsection
 ```
 ## Warning
-This Will Empty Your Table Rows and Drop all Tables
+This Will Empty Your Table Rows and Drop All Tables
 ```
-$php artisan migrate:fresh 
+$php artisan migrate:fresh
+$php artisan migrate:refresh
 ```
 ### References
 [Laravel tutorials](https://laravel-news.com/category/tutorials)
