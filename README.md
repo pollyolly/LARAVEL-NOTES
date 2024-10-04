@@ -254,6 +254,17 @@ Adding section to extended blade file
  </body>
 @endsection
 ```
+Display errors
+```vim
+<!-- Display all error -->
+@if($errors->any())
+ {!! implode('', $errors->all('<div>:message</div>')) !!}
+@endif
+
+@error('product_name') <!-- Input name -->
+ <p>Error Product Name Required</p>
+@enderror
+```
 ## Warning
 This Will Empty Your Table Rows and Drop All Tables
 ```
