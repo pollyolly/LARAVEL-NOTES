@@ -223,12 +223,12 @@ $php artisan db:seed --class=UserSeeder
 ```
 ### Blade Templating
 Adding blade file to blade file
-```
+```vim
 @include('header') <!-- header.blade.php -->
 @include('footer') <!-- footer.blade.php -->
 ```
 Adding script to blade
-```
+```vim
 <html>
  <body>
   @stack('scripts') <!-- Add here the Script -->
@@ -240,7 +240,7 @@ Adding script to blade
 @endpush
 ```
 Adding section to extended blade file
-```
+```vim
 //layout.blade.php
 <html>
  @yield('body') <!-- Add here the Section -->
