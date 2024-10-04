@@ -255,7 +255,7 @@ Adding section to extended blade file
 @endsection
 ```
 ## Warning
-This Will Empty Your Table Rows and Values
+This Will Empty Your Table Rows and Drop all Tables
 ```
 $php artisan migrate:fresh 
 ```
