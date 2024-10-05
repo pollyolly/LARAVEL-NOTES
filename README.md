@@ -222,6 +222,14 @@ $php artisan db:seed
 $php artisan db:seed --class=UserSeeder
 ```
 ### Blade Templating
+Form Request
+```vim
+<form action="/custom-url" action="POST">
+@csrf
+@method('PUT') <!-- Update Route (web.php) Route:put() -->
+<button>Update</button>
+</form>
+```
 Adding blade file to blade file
 ```vim
 @include('header') <!-- header.blade.php -->
