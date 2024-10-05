@@ -255,12 +255,12 @@ Adding script to blade
 ```
 Adding section to extended blade file
 ```vim
-//layout.blade.php
+<!-- layout.blade.php -->
 <html>
  @yield('body') <!-- Add here the Section -->
 </html>
 
-//home.blade.php
+<!-- home.blade.php -->
 @extends('layout') <!-- Extended layout.blade.php -->
 @section('body') <!-- Section to add in layout.blade.php -->
  <body>
