@@ -221,6 +221,12 @@ $php artisan make:seeder UserSeeder
 $php artisan db:seed
 $php artisan db:seed --class=UserSeeder
 ```
+## Warning
+This Will Empty Your Table Rows and Drop All Tables
+```
+$php artisan migrate:fresh
+$php artisan migrate:refresh
+```
 ### Blade Templating
 Form Request
 ```vim
@@ -272,12 +278,6 @@ Display errors
 @error('product_name') <!-- Input name -->
  <p>Error Product Name Required</p>
 @enderror
-```
-## Warning
-This Will Empty Your Table Rows and Drop All Tables
-```
-$php artisan migrate:fresh
-$php artisan migrate:refresh
 ```
 ### References
 [Laravel tutorials](https://laravel-news.com/category/tutorials)
