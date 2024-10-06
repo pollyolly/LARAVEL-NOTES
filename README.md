@@ -280,12 +280,12 @@ Display errors
  <p>Error Product Name Required</p>
 @enderror
 ```
-Component
+Blade Component
 ```vim
 $php artisan make:component Button
 ```
-app/View/Components/Button.php
 ```vim
+//app/View/Components/Button.php
 namespace App\View\Components;
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -303,14 +303,14 @@ class Button extends Component {
     }
 }
 ```
-resources/views/components/button.blade.php 
 ```vim
+<!-- resources/views/components/button.blade.php  -->
 <button {{ $attributes->merge(['class'=>'bg-'.$color.'-500 text-'.$color2]) }}>
   {{$slot}}
 </button>
 ```
-resources/views/home.blade.php 
 ```vim
+<!-- resources/views/home.blade.php  -->
 <form>
   <x-button>Save Edits</x-button>
 </form>
