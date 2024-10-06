@@ -280,6 +280,41 @@ Display errors
  <p>Error Product Name Required</p>
 @enderror
 ```
+Component
+```vim
+$php artisan make:component Button
+```
+app/View/Components/Button.php
+```vim
+namespace App\View\Components;
+use Closure;
+use Illuminate\Contracts\View\View;
+use Illuminate\View\Component;
+class Button extends Component {
+        public string $color;
+        public string $color2;
+        public function __construct($color = 'blue', $color2='white'){
+                $this->color = $color;
+                $this->color2 = $color2;
+    }
+    public function render(): View|Closure|string
+    {
+        return view('components.button');
+    }
+}
+```
+resources/views/components/button.blade.php 
+```vim
+<button {{ $attributes->merge(['class'=>'bg-'.$color.'-500 text-'.$color2]) }}>
+  {{$slot}}
+</button>
+```
+resources/views/home.blade.php 
+```vim
+<form>
+  <x-button>Save Edits</x-button>
+</form>
+```
 ### References
 [Laravel tutorials](https://laravel-news.com/category/tutorials)
 
