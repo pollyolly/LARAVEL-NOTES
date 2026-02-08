@@ -315,7 +315,23 @@ class Button extends Component {
   <x-button>Save Edits</x-button>
 </form>
 ```
+### Fix N+1 Query
+```php
+// N+1 problem (lazy loading within a loop)
+$users = User::all(); //To be requested in the database
+foreach ($users as $user) {
+  echo $user->posts->count(); // Triggers a new query for each user
+}
+// Solution: Eager loading
+$users = User::with('posts')->get(); //Stored already in an Array
+                                     //Retrieve users and posts in one query not rather than one in every user
+foreach ($users as $user) {
+  echo $user->posts->count(); // All posts are already loaded
+}
+```
 ### References
+[Eager Loading]()
+
 [Laravel tutorials](https://laravel-news.com/category/tutorials)
 
 [Install Composer on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-composer-on-ubuntu-20-04)
