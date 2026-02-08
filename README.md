@@ -330,7 +330,7 @@ foreach ($users as $user) {
 }
 ```
 ### References
-[Eager Loading]()
+[Eager Loading](https://github.com/pollyolly/PHP-QUERY-OPTIMIZATION)
 
 [Laravel tutorials](https://laravel-news.com/category/tutorials)
 
